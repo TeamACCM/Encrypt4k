@@ -2,19 +2,41 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>607</width>
-    <height>521</height>
+    <width>550</width>
+    <height>520</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>550</width>
+    <height>520</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>550</width>
+    <height>520</height>
+   </size>
+  </property>
+  <property name="cursor">
+   <cursorShape>PointingHandCursor</cursorShape>
+  </property>
   <property name="windowTitle">
-   <string>Test</string>
+   <string>Encrypt4k</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>//s29216004mtk/Moritz.Sundarp$/Desktop/paomedia-small-n-flat-lock.ico</normaloff>//s29216004mtk/Moritz.Sundarp$/Desktop/paomedia-small-n-flat-lock.ico</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="Encryp_Button">
+   <widget class="QPushButton" name="btnEncryp">
     <property name="geometry">
      <rect>
       <x>300</x>
@@ -27,11 +49,11 @@
      <string>Encrypt</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="Cancel_Button">
+   <widget class="QPushButton" name="btnCancel">
     <property name="geometry">
      <rect>
       <x>390</x>
-      <y>430</y>
+      <y>460</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -57,7 +79,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="Decrypt_Button">
+   <widget class="QPushButton" name="btnDecrypt">
     <property name="geometry">
      <rect>
       <x>381</x>
@@ -87,11 +109,11 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="Browse_Button">
+   <widget class="QPushButton" name="btnBrowse">
     <property name="geometry">
      <rect>
       <x>90</x>
-      <y>430</y>
+      <y>220</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -139,11 +161,11 @@ p, li { white-space: pre-wrap; }
      <string>En- and Decrypting using Ceasar-Code</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="Save_Button">
+   <widget class="QPushButton" name="btnSave">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>430</y>
+      <x>90</x>
+      <y>460</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -152,10 +174,10 @@ p, li { white-space: pre-wrap; }
      <string>Save as ...</string>
     </property>
    </widget>
-   <widget class="QSpinBox" name="spinBox">
+   <widget class="QSpinBox" name="sboxKey">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>230</x>
       <y>220</y>
       <width>42</width>
       <height>22</height>
@@ -171,10 +193,10 @@ p, li { white-space: pre-wrap; }
      <number>25</number>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="key_label">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>200</x>
       <y>220</y>
       <width>31</width>
       <height>16</height>
@@ -184,26 +206,42 @@ p, li { white-space: pre-wrap; }
      <string>Key:</string>
     </property>
    </widget>
+   <widget class="QProgressBar" name="barPw">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>430</y>
+      <width>118</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+    <property name="maximum">
+     <number>4</number>
+    </property>
+    <property name="value">
+     <number>-1</number>
+    </property>
+    <property name="format">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkPw">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>430</y>
+      <width>70</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Password</string>
+    </property>
+   </widget>
   </widget>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>607</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>LeftToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-  </widget>
-  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

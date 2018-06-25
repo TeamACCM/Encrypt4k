@@ -1,9 +1,5 @@
 #include "mainwindow.h"
 #include <QApplication>
-#include <string>
-#include <iostream>
-#include <fstream>
-#include <limits>
 
 using namespace std;
 

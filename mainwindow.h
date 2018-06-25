@@ -16,7 +16,20 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_Cancel_Button_clicked();
+    void on_btnCancel_clicked();
+
+    void on_btnBrowse_clicked();
+
+    void on_btnEncryp_clicked();
+
+    void on_btnDecrypt_clicked();
+
+    void on_btnSave_clicked();
+
+
+    void on_checkPw_toggled(bool checked);
+
+    void on_input_Textedit_textChanged();
 
 private:
     Ui::MainWindow *ui;
